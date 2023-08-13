@@ -32,8 +32,8 @@
                             <div class="product" id="showproduct">
                                 <a href="javascript:void(0)" class="img-prod" id="details"
                                     data-url="{{ route('details', $d->id) }}"
-                                    data-img="{{ asset('backend/products/' . $d->thumbnails) }}"><img
-                                        class="img-fluid" src="{{ asset('backend/products/' . $d->thumbnails) }}">
+                                    data-img="{{ asset('backend/products/' . $d->thumbnails) }}"><img class="img-fluid"
+                                        src="{{ asset('backend/products/' . $d->thumbnails) }}">
                                     <div class="overlay"></div>
                                 </a>
                                 <div class="text py-3 pb-4 px-3 text-center">
@@ -90,7 +90,7 @@
                             <img id="products_img" src="" height="70%" width="70%"></img>
                             <hr>
                             <h4><span id="name"></span></h4>
-                            <h5>Rp. <span id="price"></span> | <small id="weight"></small></h5>
+                            <h5>Rp. <span id="price"></span> | <span id="weight"></span> gr</h5>
                             <p><span id="descriptions"></span></p>
                             <div class="row mt-4">
                                 <div class="col-md-3"></div>

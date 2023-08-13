@@ -8,7 +8,7 @@
                         <table class="table">
                             <thead class="thead-primary">
                                 <tr class="text-center">
-                                    <th></th>
+                                    {{-- <th></th> --}}
                                     <th>&nbsp;</th>
                                     <th>Faktur</th>
                                     <th>Total</th>
@@ -21,11 +21,12 @@
                                 <form class="billing-form" id="pendingPay">
                                     @foreach ($order as $item)
                                         <tr class="text-center">
-                                            <td class="price"><a href="javascript:void(0)" id="orderdetails"
+                                            {{-- <td class="price"><a href="javascript:void(0)" id="orderdetails"
                                                     class="btn btn-primary py-3 px-4"
                                                     data-url="{{ route('order.detail', $item->id) }}"
                                                     value="{{ $item->id }}">Detail</a>
-                                            </td>
+                                            </td> --}}
+
 
                                             @if ($item->transaction_status == 'pending' && $item->order_status == 'P')
                                                 <td class="product-remove"><a href="javascript:void(0)" id="cancel"

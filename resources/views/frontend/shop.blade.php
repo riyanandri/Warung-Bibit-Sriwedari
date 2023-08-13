@@ -16,11 +16,12 @@
             <div class="row justify-content-center">
                 <div class="col-md-10 mb-5 text-center">
                     <ul class="product-category">
-    					<li><a href="#" class="active">Semua</a></li>
+                        <li><a href="#" class="active">Semua</a></li>
                         @foreach ($categories as $c)
-                        <li><a href="{{ route('categories',$c->slug) }}" id="{{ $c->slug }}">{{ $c->name }}</a></li>
-                    @endforeach
-    				</ul>
+                            <li><a href="{{ route('categories', $c->slug) }}"
+                                    id="{{ $c->slug }}">{{ $c->name }}</a></li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
             <div class="tab-content">
@@ -31,8 +32,7 @@
                                 <div class="product" id="showproduct">
                                     <a href="javascript:void(0)" class="img-prod" id="details"
                                         data-url="{{ route('details', $d->id) }}"
-                                        data-img="{{ asset('backend/products/' . $d->thumbnails) }}"><img
-                                            class="img-fluid"
+                                        data-img="{{ asset('backend/products/' . $d->thumbnails) }}"><img class="img-fluid"
                                             src="{{ asset('backend/products/' . $d->thumbnails) }}">
                                         <div class="overlay"></div>
                                     </a>
@@ -91,7 +91,7 @@
                             <img id="products_img" src="" height="70%" width="70%"></img>
                             <hr>
                             <h4><span id="name"></span></h4>
-                            <h5>Rp. <span id="price"></span> | <small id="weight"></small></h5>
+                            <h5>Rp. <span id="price"></span> | <span id="weight"></span> gr</h5>
                             <p><span id="descriptions"></span></p>
                             <div class="row mt-4">
                                 <div class="col-md-3"></div>
@@ -103,9 +103,8 @@
                                         </button>
                                     </span>
                                     <input type="hidden" name="product_id" value="" id="product_id">
-                                    <input type="text" id="quantity" name="quantity"
-                                        class="form-control input-number" value="1" min="1" max="100"
-                                        style="text-align:center">
+                                    <input type="text" id="quantity" name="quantity" class="form-control input-number"
+                                        value="1" min="1" max="100" style="text-align:center">
                                     <span class="input-group-btn ml-2">
                                         <button type="button" class="quantity-right-plus btn" data-type="plus"
                                             data-field="">

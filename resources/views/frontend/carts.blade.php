@@ -84,7 +84,7 @@
                                     </div>
                                 </div>
                                 <div class="w-100"></div>
-                                <div class="col-md-12">
+                                {{-- <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="country">Negara</label>
                                         <div class="select-wrap">
@@ -92,7 +92,7 @@
                                                 required placeholder="">
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="w-100"></div>
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -126,8 +126,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="phone">No Hp</label>
-                                        <input type="text" class="form-control" name="phone" id="phone"
-                                            required placeholder="">
+                                        <input type="text" class="form-control" name="phone" id="phone" required
+                                            placeholder="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">

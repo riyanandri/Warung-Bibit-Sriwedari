@@ -10,10 +10,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\Facades\Crypt;
+use App\Http\Traits\AESTrait;
 
 class TransactionController extends Controller
 {
-
     public function checkout(Request $request)
     {
         $data = [
@@ -25,7 +25,7 @@ class TransactionController extends Controller
             'order_status'          => 'P',
             'first_name'            => Crypt::encrypt($request->first_name),
             'last_name'             => Crypt::encrypt($request->last_name),
-            'state'                 => Crypt::encrypt($request->state),
+            // 'state'                 => Crypt::encrypt($request->state),
             'street'                => Crypt::encrypt($request->street),
             'detailstreet'          => Crypt::encrypt($request->detailstreet),
             'city'                  => Crypt::encrypt($request->city),
@@ -33,6 +33,7 @@ class TransactionController extends Controller
             'phone'                 => Crypt::encrypt($request->phone),
             'email'                 => Crypt::encrypt($request->email),
         ];
+
         try {
             $order = Order::create($data);
             $cart = Carts::where('user_id', Auth::user()->id);

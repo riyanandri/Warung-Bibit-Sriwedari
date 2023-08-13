@@ -9,7 +9,8 @@
 
                         <div class="col-md-12 ftco-animate text-center">
                             <h1 class="mb-2">Warung Bibit Sriwedari</h1>
-                            <h2 class="subheading mb-4"> Kami menyediakan berbagai macam bibit, benih, pupuk, dan obat tanaman yang berkualitas.</h2>
+                            <h2 class="subheading mb-4"> Kami menyediakan berbagai macam bibit, benih, pupuk, dan obat
+                                tanaman yang berkualitas.</h2>
                             <p><a href="{{ route('shop') }}" class="btn btn-primary">Lihat Detail</a></p>
                         </div>
 
@@ -114,7 +115,8 @@
                                 </div>
                                 <div class="bottom-area d-flex px-3">
                                     <div class="m-auto d-flex">
-                                        <a href="javascript:void(0)" id="buynow" data-url="{{ route('details', $d->id) }}"
+                                        <a href="javascript:void(0)" id="buynow"
+                                            data-url="{{ route('details', $d->id) }}"
                                             data-img="{{ asset('backend/products/' . $d->thumbnails) }}"
                                             class="buy-now d-flex justify-content-center align-items-center mx-1">
                                             <span><i class="ion-ios-cart"></i></span>
@@ -153,24 +155,28 @@
                                         <img id="products_img" src="" height="70%" width="70%"></img>
                                         <hr>
                                         <h4><span id="name"></span></h4>
-                                        <h5>Rp. <span id="price"></span> | <small id="weight"></small></h5>
+                                        <h5>Rp. <span id="price"></span> | <span id="weight"></span> gr</h5>
                                         <p><span id="descriptions"></span></p>
                                         <div class="row mt-4">
                                             <div class="col-md-3"></div>
                                             <div class="input-group col-md-6 d-flex mb-3">
                                                 <span class="input-group-btn mr-2">
-                                                   <button type="button" class="quantity-left-minus btn" data-type="minus" data-field="">
-                                                  <i class="ion-ios-remove"></i>
-                                                   </button>
-                                                   </span>
-                                                   <input type="hidden" name="product_id" value="" id="product_id">
-                                                <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100" style="text-align:center">
-                                                <span class="input-group-btn ml-2">
-                                                   <button type="button" class="quantity-right-plus btn" data-type="plus" data-field="">
-                                                    <i class="ion-ios-add"></i>
-                                                </button>
+                                                    <button type="button" class="quantity-left-minus btn"
+                                                        data-type="minus" data-field="">
+                                                        <i class="ion-ios-remove"></i>
+                                                    </button>
                                                 </span>
-                                             </div>
+                                                <input type="hidden" name="product_id" value="" id="product_id">
+                                                <input type="text" id="quantity" name="quantity"
+                                                    class="form-control input-number" value="1" min="1"
+                                                    max="100" style="text-align:center">
+                                                <span class="input-group-btn ml-2">
+                                                    <button type="button" class="quantity-right-plus btn"
+                                                        data-type="plus" data-field="">
+                                                        <i class="ion-ios-add"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
                                         </div>
                                         <br>
                                         <div class="col-md-12">
